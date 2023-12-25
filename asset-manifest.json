@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/gaming-website/static/css/main.32476083.css",
+    "main.js": "/gaming-website/static/js/main.e9d67430.js",
+    "static/media/f4.png": "/gaming-website/static/media/f4.576eb6f9dbafc6779830.png",
+    "static/media/paint_game_logo.jpg": "/gaming-website/static/media/paint_game_logo.f49037d031c6628c5e36.jpg",
+    "static/media/userPhoto.png": "/gaming-website/static/media/userPhoto.aaae6a4dcb6c0cfdbaa8.png",
+    "static/media/card_2.PNG": "/gaming-website/static/media/card_2.70cbd97ac269a50f3c77.PNG",
+    "static/media/card_1.PNG": "/gaming-website/static/media/card_1.19901f1657fe28175690.PNG",
+    "static/media/card_5.PNG": "/gaming-website/static/media/card_5.1597dd4ab18a0719df86.PNG",
+    "static/media/card_4.PNG": "/gaming-website/static/media/card_4.692a323f69aaef12ad8a.PNG",
+    "static/media/logo.PNG": "/gaming-website/static/media/logo.9391836e503fe33bc863.PNG",
+    "static/media/card_8.PNG": "/gaming-website/static/media/card_8.e45e1e1a4647dc4ebdce.PNG",
+    "static/media/card_3.PNG": "/gaming-website/static/media/card_3.52dfc1d2cd386bb3b39b.PNG",
+    "static/media/card_6.PNG": "/gaming-website/static/media/card_6.cbb952030fde12bc3656.PNG",
+    "static/media/memory_game_logo.png": "/gaming-website/static/media/memory_game_logo.37c40a9a63488634e8f5.png",
+    "static/media/subway_surfers_game_logo.jpg": "/gaming-website/static/media/subway_surfers_game_logo.5314cd672d3a9396b067.jpg",
+    "index.html": "/gaming-website/index.html",
+    "main.32476083.css.map": "/gaming-website/static/css/main.32476083.css.map",
+    "main.e9d67430.js.map": "/gaming-website/static/js/main.e9d67430.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32476083.css",
+    "static/js/main.e9d67430.js"
+  ]
+}
