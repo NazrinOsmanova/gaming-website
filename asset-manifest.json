@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gaming-website/static/css/main.32476083.css",
-    "main.js": "/gaming-website/static/js/main.eba408a7.js",
+    "main.js": "/gaming-website/static/js/main.1f9ee9dd.js",
     "static/media/f4.png": "/gaming-website/static/media/f4.576eb6f9dbafc6779830.png",
     "static/media/paint_game_logo.jpg": "/gaming-website/static/media/paint_game_logo.f49037d031c6628c5e36.jpg",
     "static/media/userPhoto.png": "/gaming-website/static/media/userPhoto.aaae6a4dcb6c0cfdbaa8.png",
@@ -17,10 +17,10 @@
     "static/media/subway_surfers_game_logo.jpg": "/gaming-website/static/media/subway_surfers_game_logo.5314cd672d3a9396b067.jpg",
     "index.html": "/gaming-website/index.html",
     "main.32476083.css.map": "/gaming-website/static/css/main.32476083.css.map",
-    "main.eba408a7.js.map": "/gaming-website/static/js/main.eba408a7.js.map"
+    "main.1f9ee9dd.js.map": "/gaming-website/static/js/main.1f9ee9dd.js.map"
   },
   "entrypoints": [
     "static/css/main.32476083.css",
-    "static/js/main.eba408a7.js"
+    "static/js/main.1f9ee9dd.js"
   ]
 }
