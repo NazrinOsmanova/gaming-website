@@ -1,13 +1,928 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* 2ci font footer ucundur */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+/* Game Over sozu ucundur */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Preahvihear', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.none {
+  display: none !important;
+}
+
+.shadow {
+  filter: drop-shadow(0 0 50px rgb(127, 32, 51));
+  transition: 0.5s;
+}
+
+.block {
+  display: block !important;
+}
+
+.z_index {
+  z-index: -2;
+}
+
+.z_index2 {
+  z-index: -1;
+}
+
+.z_index3 {
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+header {
+  width: 100%;
+  background: rgba(4, 10, 27, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  color: white;
+  position: fixed;
+  z-index: 2;
+}
+
+header .left img {
+  width: 110px;
+}
+
+header .left {
+  display: flex;
+  align-items: center;
+}
+
+header .left i {
+  font-size: 30px;
+  margin-right: 30px;
+}
+
+header .search {
+  position: relative;
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+header .search input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 17px;
+  border-radius: 0.4cm;
+  background-color: rgb(83, 85, 118);
+  border: none;
+  color: white;
+  outline: none;
+}
+
+header .search input::placeholder {
+  color: white;
+}
+
+header .search i {
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  transition: 0.4s;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+header .search i:hover {
+  font-size: 22px;
+}
+
+header .right button {
+  padding: 10px 15px;
+  border-radius: 0.5cm;
+  border: none;
+  color: white;
+  background-color: rgb(83, 85, 118);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+header .right i {
+  margin: 0px 10px;
+  border: 2px solid rgb(224, 217, 217);
+  padding: 12px;
+  border-radius: 100%;
+  color: white;
+}
+
+.indexMain {
+  width: 100%;
+  background: radial-gradient(circle, rgba(78, 68, 183, 1) 0%, rgba(10, 47, 91, 1) 100%);
+  display: flex;
+  position: relative;
+  padding-top: 75px;
+  color: white;
+}
+
+.indexMain section {
+  padding: 10px;
+  width: 100%;
+}
+
+.indexMain section .items h3 {
+  text-align: left;
+  font-size: 27px;
+  text-shadow: rgb(255, 102, 0) 1px 0 10px;
+}
+
+.indexMain section .items .games {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.indexMain section .items .games .game {
+  width: 11%;
+  position: relative;
+  margin: 10px;
+}
+
+.indexMain section .items .games .game img {
+  border-radius: 0.4cm;
+  width: 100%;
+}
+
+.indexMain section .items .games .game h5 {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  width: 100%;
+  bottom: 10px;
+  border-bottom-right-radius: 0.3cm;
+  border-bottom-left-radius: 0.3cm;
+  display: none;
+}
+
+.indexMain section .items .games .game:hover h5 {
+  display: block;
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+nav {
+  height: 90vh;
+  text-align: left;
+  background-color: rgb(33, 40, 60);
+  padding: 10px;
+  width: 18%;
+  position: absolute;
+  z-index: 1;
+  transition: 0.4s;
+  display: none;
+  margin-top: 75px;
+}
+
+nav ul:first-child {
+  border-bottom: 1px solid white;
+}
+
+nav ul li {
+  padding: 7px 5px 3px 12px;
+  font-size: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a i {
+  margin-right: 10px;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -150%;
+  width: 100%;
+  height: 2px;
+  background-color: #d4dfe7;
+  transition: left 0.5s;
+}
+
+nav ul li:hover a::before {
+  left: 0;
+}
+
+footer,
+footer a,
+footer .up li {
+  background-color: rgb(4 14 41);
+  color: white;
+}
+
+footer .up {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .up p {
+  font-family: 'Open Sans', sans-serif;
+  width: 20%;
+}
+
+footer .up li a {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+footer .up li a i {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+
+footer .up ul {
+  display: flex;
+  justify-content: space-between;
+  width: 22%;
+}
+
+footer .down,
+footer .down a {
+  background-color: #0d151b;
+  text-decoration: none;
+  padding: 10px;
+}
+
+footer .down p a {
+  transition: 0.4s;
+}
+
+footer .down a:hover {
+  letter-spacing: 2px;
+  transition: 0.4s;
+}
+
+.loginMain {
+  background: linear-gradient(70deg, rgba(93, 16, 114, 1) 18%, rgba(75, 16, 36, 1) 51%, rgba(12, 17, 98, 1) 100%);
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+
+.loginMain .container {
+  margin: 80px 10px 30px 10px;
+  width: 40%;
+  padding: 20px 30px 10px 30px;
+  background: rgba(73, 66, 85, 0.5);
+  transition: 0.5s;
+  border-radius: 1cm;
+}
+
+.loginMain .container h3 {
+  font-size: 30px;
+}
+
+.loginMain .container img {
+  width: 30%;
+}
+
+.loginMain .container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0px auto;
+}
+
+.loginMain .container form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  position: relative;
+}
+
+.loginMain .container form div::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to left, transparent 50%, white 50%);
+  transition: width 0.3s ease;
+}
+
+.loginMain .container form div:hover::after {
+  width: 100%;
+}
+
+.loginMain .container form div::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(0%);
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to left, transparent 50%, white 50%);
+  transition: width 0.3s ease;
+}
+
+.loginMain .container form div:hover::before {
+  width: 100%;
+}
+
+.loginMain .container form div i {
+  font-size: 22px;
+}
+
+.loginMain .container form div input {
+  width: 90%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  color: white;
+  outline: none;
+}
+
+.loginMain .container form div input::placeholder {
+  color: white;
+}
+
+.loginMain .container form button {
+  border-radius: 1cm;
+  font-size: 18px;
+  background: linear-gradient(70deg, rgba(102, 15, 7, 0.5) 8%, rgba(8, 32, 110, 0.5) 48%, rgba(86, 92, 200, 0.5) 100%);
+  border: none;
+  color: white;
+  margin: 15px 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.loginMain .container .down {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto;
+  color: #c0c4ef;
+}
+
+.loginMain .container .down a {
+  text-decoration: none;
+  color: #c0c4ef;
+}
+
+.memoryMain {
+  background: linear-gradient(to right, #34396d, #858bd1, #34396d);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 80px;
+  color: white;
+}
+
+.memoryMain section {
+  width: 30%;
+  padding: 0px 10px;
+}
+
+.memoryMain section:nth-child(2) {
+  width: 33%;
+  padding: 0px;
+}
+
+.memoryMain section .left {
+  text-align: left;
+}
+
+.memoryMain section .left h2 {
+  font-size: 20px;
+}
+
+.memoryMain .play .buttons button {
+  background-color: rgb(14, 102, 164);
+  border: 0;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: system-ui, system-ui, "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 14px 25px;
+  position: relative;
+  transition: all 0.3s;
+  margin: 15px;
+}
+
+.memoryMain .play .buttons button:before {
+  background: linear-gradient(#cedeeb 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 105px;
+  content: "";
+  height: 70%;
+  left: 10%;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 80%;
+}
+
+.memoryMain section button:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+.memoryMain .play {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.memoryMain .play div,
+.memoryMain .play div:first-child {
+  font-size: 25px;
+  margin: 30px auto;
+}
+
+.memoryMain .play div:nth-child(2) {
+  font-size: 50px;
+}
+
+.memoryMain .section2 {
+  margin: 0px auto;
+}
+
+.memoryMain .section2 .images {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.memoryMain .section2 .images .two_images {
+  margin: 10px;
+  position: relative;
+  width: 23%;
+  display: flex;
+}
+
+.memoryMain .section2 .images .two_images img {
+  width: 100%;
+}
+
+.memoryMain .section2 .images .two_images>img:last-child {
+  position: absolute;
+}
+
+.memoryMain .play div:first-child span {
+  text-decoration: underline;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(4, 10, 27, 0.5);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  z-index: 5;
+}
+
+.modal>div {
+  width: 35%;
+  padding: 60px 30px;
+  border-radius: 50px;
+  background: linear-gradient(0deg, rgba(12, 17, 98, 1) 8%, rgb(28, 92, 113) 48%, rgba(12, 17, 98, 1) 100%);
+}
+
+.modal>div h4 {
+  font-size: 60px;
+  font-family: 'Rubik Scribble', sans-serif;
+}
+
+.modal>div h5 {
+  font-size: 26px;
+  margin: 15px 0px;
+}
+
+.modal>div .result {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0px;
+}
+
+.modal>div .result p {
+  font-size: 20px;
+}
+
+.modal .question button {
+  border: none;
+  background-color: #6c5ce7;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #a29bfe;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.modal .question button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+.modal .question button:first-child i {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+
+/* ------------------------------------------------- MEDİA HİSSESİNİN KODLARI ----------------------------------------------------------- */
+
+
+@media screen and (min-width: 301px) and (max-width: 1450px) {
+  .memoryMain section:nth-child(2) {
+    width: 36%;
+  }
+
+  .memoryMain .section2 .images .two_images {
+    margin: 5px;
+    width: 28%;
+  }
+
+  .modal>div {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 1200px) {
+  .indexMain section .items .games .game {
+    width: 15%;
+  }
+
+  nav {
+    width: 23%;
+  }
+
+  .loginMain .container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 1000px) {
+  .indexMain section .items .games .game {
+    width: 18%;
+  }
+
+  footer .up {
+    justify-content: space-between;
+  }
+
+  nav {
+    width: 30%;
+  }
+
+  .memoryMain {
+    flex-wrap: wrap;
+  }
+
+  .memoryMain section:first-child {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .memoryMain section:nth-child(2),
+  .memoryMain section:last-child {
+    width: 45%;
+    margin: 20px auto;
+  }
+
+  .modal>div {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 1000px) {
+  footer .up {
+    padding: 20px;
+  }
+
+  footer .up ul {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 850px) {
+  .indexMain section .items .games .game {
+    width: 21%;
+  }
+
+  footer .up p {
+    width: 30%;
+  }
+
+  footer .up ul {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+
+  footer .up ul li {
+    margin: 5px;
+  }
+
+  .indexMain section .items .games {
+    justify-content: space-around;
+  }
+
+  .indexMain section .items h3 {
+    text-align: center;
+    margin: 10px;
+  }
+
+  header .search {
+    width: 42%;
+  }
+
+  header .left i {
+    font-size: 28px;
+  }
+
+  .memoryMain section:last-child p {
+    font-size: 20px;
+  }
+
+  .memoryMain section:last-child {
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .memoryMain section:nth-child(2) {
+    width: 100%;
+    order: 3;
+  }
+
+  .memoryMain .section2 .images .two_images {
+    width: 21%;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 720px) {
+  .loginMain .container form {
+    width: 90%;
+  }
+
+  .loginMain .container h3 {
+    font-size: 25px;
+  }
+
+  .loginMain .container .down {
+    flex-wrap: wrap;
+  }
+
+  .loginMain .container .down>* {
+    width: 100%;
+  }
+
+  .memoryMain section:last-child {
+    align-items: center;
+  }
+
+  .memoryMain .play p {
+    font-size: 17px;
+  }
+
+  .memoryMain section:last-child span {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 680px) {
+  .indexMain section .items .games .game {
+    width: 30%;
+    margin: 20px 8px;
+  }
+
+  footer .up {
+    flex-wrap: wrap;
+  }
+
+  footer .up p {
+    display: block;
+    width: 60%;
+  }
+
+  footer .up ul {
+    width: 42%;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  footer .up ul li {
+    margin: 10px;
+  }
+
+  header .left img {
+    display: none;
+  }
+
+  header .left {
+    width: 10%;
+  }
+
+  footer .up p {
+    width: 80%;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    width: 25%;
+    margin: 10px;
+    padding: 0px;
+  }
+
+  nav ul li a::before {
+    display: none;
+  }
+
+  .memoryMain section:last-child {
+    flex-direction: column;
+  }
+
+  .memoryMain section:last-child>div:first-child,
+  .memoryMain section:last-child>div:nth-child(2) {
+    margin: 0px;
+  }
+
+  .memoryMain section:last-child>div:first-child p {
+    line-height: 35px;
+  }
+
+  .memoryMain section:last-child>div:first-child p span {
+    font-size: 25px;
+  }
+
+  .memoryMain section:last-child div {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .modal>div {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 590px) {
+  .loginMain .container {
+    width: 90%;
+  }
+
+  .loginMain .container h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 500px) {
+  .indexMain section .items .games .game {
+    width: 40%;
+  }
+
+  footer .up ul {
+    flex-direction: column;
+  }
+
+  header .search i {
+    display: none;
+  }
+
+  header .left i {
+    font-size: 25px;
+  }
+
+  header .search input {
+    padding: 5px 10px;
+  }
+
+  header .right button {
+    padding: 5px 10px;
+  }
+
+  header .right i {
+    padding: 8px;
+  }
+
+  header {
+    padding: 10px 0px 10px 7px;
+  }
+
+  .indexMain {
+    padding-top: 50px;
+  }
+
+  nav ul li {
+    width: 70%;
+    margin: 10px 0px;
+  }
+
+  .memoryMain {
+    padding: 60px 2px 0px 2px;
+  }
+
+  .memoryMain .section2 .images .two_images {
+    width: 28%;
+    margin: 10px;
+  }
+
+  .modal>div h4 {
+    font-size: 35px;
+  }
+
+  .modal>div h5 {
+    font-size: 25px;
+  }
+
+  .modal>div .result {
+    margin: 10px 0px;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 400px) {
+  .indexMain section .items .games .game {
+    width: 60%;
+  }
+
+  footer .up p {
+    width: 100%;
+  }
+
+  nav ul li {
+    font-size: 20px;
+  }
+
+  .loginMain .container {
+    padding: 20px 10px;
+  }
+
+  .loginMain .container form {
+    width: 100%;
+  }
+
+  .loginMain .container form div {
+    margin: 5px;
+  }
+
+  .memoryMain .section2 .images .two_images {
+    width: 37%;
+    margin: 10px;
+  }
+
+  .memoryMain {
+    flex-direction: column;
+  }
+
+  .memoryMain section:first-child {
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+  }
 }
