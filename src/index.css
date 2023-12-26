@@ -17,30 +17,6 @@ ul {
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.none {
-  display: none !important;
-}
-
-.shadow {
-  filter: drop-shadow(0 0 50px rgb(127, 32, 51));
-  transition: 0.5s;
-}
-
-.block {
-  display: block !important;
-}
-
-.z_index {
-  z-index: -2;
-}
-
-.z_index2 {
-  z-index: -1;
-}
-
-.z_index3 {
-  z-index: 2;
-}
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -562,6 +538,30 @@ footer .down a:hover {
   margin-right: 10px;
 }
 
+.none {
+  display: none !important;
+}
+
+.shadow {
+  filter: drop-shadow(0 0 50px rgb(127, 32, 51));
+  transition: 0.5s;
+}
+
+.block {
+  display: block !important;
+}
+
+.z_index {
+  z-index: -2;
+}
+
+.z_index2 {
+  z-index: -1;
+}
+
+.z_index3 {
+  z-index: 3;
+}
 
 /* ------------------------------------------------- MEDİA HİSSESİNİN KODLARI ----------------------------------------------------------- */
 

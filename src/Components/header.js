@@ -30,7 +30,7 @@ const Header = () => {
                             <i onClick={slider} className="fa-solid fa-sliders"></i>
                         )
                     }
-                    <Link to="/">
+                    <Link to="/gaming-website">
                         <img src={logo} alt="logo" />
                     </Link>
                 </div>
