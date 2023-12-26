@@ -83,7 +83,7 @@ const Memorygame = () => {
     e.target.classList.add("z_index");
     clickSayiRef.current += 1;
     if (clickSayiRef.current == 1) {
-      birinciKlikSrc.current = e.target.previousElementSibling.src.replace('http://localhost:3000/gaming-website/static/media/', '').slice(0, 6)
+      birinciKlikSrc.current = e.target.previousElementSibling.src.replace('https://nazrinosmanova.github.io/gaming-website/static/media/', '').slice(0, 6)
     }
     if (clickSayiRef.current == 2) {
       if (qalanCehdSayi.current > 0) {
@@ -95,7 +95,7 @@ const Memorygame = () => {
         document.querySelector(".modal").classList.remove("none")
         document.querySelector(".modal .result p:last-child span").innerText = qalanCehdSayi.current
       }
-      ikinciKlikSrc.current = e.target.previousElementSibling.src.replace('http://localhost:3000/gaming-website/static/media/', '').slice(0, 6)
+      ikinciKlikSrc.current = e.target.previousElementSibling.src.replace('https://nazrinosmanova.github.io/gaming-website/static/media/', '').slice(0, 6)
       document.querySelectorAll(".memoryMain .section2 .images .two_images>img:last-child").forEach(f => {
         setTimeout(() => {
           f.classList.remove("z_index");
@@ -103,7 +103,7 @@ const Memorygame = () => {
       })
       if (birinciKlikSrc.current == ikinciKlikSrc.current) {
         document.querySelectorAll(".memoryMain .section2 .images .two_images>img:first-child").forEach(z => {
-          if (birinciKlikSrc.current == z.src.replace('http://localhost:3000/gaming-website/static/media/', '').slice(0, 6)) {
+          if (birinciKlikSrc.current == z.src.replace('https://nazrinosmanova.github.io/gaming-website/static/media/', '').slice(0, 6)) {
             z.classList.add("z_index3")
           }
         })
